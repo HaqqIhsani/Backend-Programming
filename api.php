@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnimalController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\StudentsController;
 
 /*
@@ -39,3 +40,15 @@ Route::get('/students', [StudentController::class, 'index']);
 # menambahkan resource student
 # method post
 Route::post('/students', [StudentController::class, 'store']);
+
+# mendapatkan detail resource student
+# method get
+Route::get('/students/{id}', [StudentController::class, 'show']);
+
+# memperbarui resource student
+# method put
+Route::put('/student/{$id}', [StudentController::class, 'update']);
+
+# menghapus resource student
+# method delete
+Route::delete('/student/{id', [StudentController::class, 'destroy']);
